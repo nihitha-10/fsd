@@ -1,0 +1,14 @@
+package com.klh;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+public class HiberanateUtil {
+    private static SessionFactory factory;
+
+    static {
+        factory = new Configuration().configure().buildSessionFactory();
+    }
+    public static SessionFactory getSessionFactory() {
+        return factory;
+    }
+}
